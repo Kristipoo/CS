@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Make Money Online – Starter Course</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f9fafb;
+        color: #222;
+        scroll-behavior: smooth;
+      }
+      header {
+        background: linear-gradient(135deg, #111, #333);
+        color: white;
+        padding: 3rem 1rem;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      header p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+      }
+      .btn {
+        display: inline-block;
+        background: white;
+        color: black;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: opacity 0.2s;
+      }
+      .btn:hover {
+        opacity: 0.8;
+      }
+
+      section {
+        max-width: 800px;
+        margin: 3rem auto;
+        padding: 0 1rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+      .card {
+        background: white;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .card h3 {
+        margin: 0 0 0.5rem;
+      }
+      .card p {
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      #checkout {
+        text-align: center;
+        padding: 3rem 1rem;
+        background: #eee;
+        border-radius: 12px;
+      }
+      #checkout a {
+        background: black;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: opacity 0.2s;
+      }
+      #checkout a:hover {
+        opacity: 0.8;
+      }
+
+      #course {
+        display: none;
+        margin-top: 2rem;
+      }
+      #course article {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      }
+      footer {
+        background: #111;
+        color: #888;
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero -->
+    <header>
+      <h1>How to Make Money Online</h1>
+      <p>
+        A curated beginner-friendly course showing proven ways people earn
+        income from the internet.
+      </p>
+      <a href="#checkout" class="btn">Let’s Get Started</a>
+    </header>
+
+    <!-- What you'll learn -->
+    <section>
+      <h2>What You’ll Learn</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Affiliate Marketing</h3>
+          <p>
+            How people promote products with referral links and earn
+            commissions.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Freelancing</h3>
+          <p>
+            Platforms like Fiverr and Upwork where others sell services online.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Digital Products</h3>
+          <p>
+            E-books, templates, or mini-courses that can generate passive
+            income.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout -->
+    <section id="checkout">
+      <h2>Ready to Start?</h2>
+      <p>Access the full course for a one-time payment.</p>
+      <!-- Replace # with your payment link -->
+      <a href="#" id="payBtn">Proceed to Payment</a>
+
+      <div id="course">
+        <h2>Course Modules</h2>
+        <article>
+          <h3>Module 1 – Online Income Basics</h3>
+          <p>
+            Overview of how online businesses make money: ads, services,
+            products.
+          </p>
+        </article>
+        <article>
+          <h3>Module 2 – Affiliate Marketing</h3>
+          <p>
+            Step-by-step look at Amazon Associates, ClickBank, and Awin
+            examples.
+          </p>
+        </article>
+        <article>
+          <h3>Module 3 – Freelancing</h3>
+          <p>How freelancers get clients and price work on Fiverr/Upwork.</p>
+        </article>
+        <article>
+          <h3>Module 4 – Digital Products</h3>
+          <p>
+            How people create and sell e-books, Notion templates, and courses.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        © <span id="year"></span> Make Money Online Course. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      // Dynamic year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Simulate course unlock after payment
+      const payBtn = document.getElementById("payBtn");
+      payBtn.addEventListener("click", function (e) {
+        // Comment out next line when real payment link is added
+        e.preventDefault();
+
+        document.getElementById("course").style.display = "block";
+        window.location.hash = "#course";
+      });
+    </script>
+  </body>
+</html>
